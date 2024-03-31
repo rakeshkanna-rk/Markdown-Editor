@@ -1,0 +1,29 @@
+{
+  "name": "markdown-editor",
+  "version": "1.0.0",
+  "description": "A Web Based Markdown Editor",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rakeshkanna-rk/Markdown-Editor.git"
+  },
+  "keywords": [
+    "markdown",
+    "editor",
+    "tool",
+    "webbased",
+    "utility"
+  ],
+  "author": "Rakesh Kanna",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rakeshkanna-rk/Markdown-Editor/issues"
+  },
+  "homepage": "https://github.com/rakeshkanna-rk/Markdown-Editor#readme",
+  "dependencies": {
+    "codemirror": "^6.0.1"
+  }
+}
