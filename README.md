@@ -11,7 +11,6 @@ This Markdown Editor is a simple web-based tool designed to provide an intuitive
 - **Syntax Highlighting**: Utilizes CodeMirror to provide syntax highlighting for Markdown text, making it easier to read and edit.
 - **Live Preview**: Instantly see the rendered HTML output of your Markdown text as you type.
 - **Download Markdown File**: Allows users to download their Markdown document as a file, with the option to specify the filename.
-- **Responsive Design**: Designed to be mobile-friendly, ensuring a seamless experience across devices.
 
 ## Usage
 
