@@ -24,7 +24,7 @@ This Markdown Editor is a web-based tool designed for an intuitive writing and p
 
 ![Screenshot 1](screenshot-editor.png)
 
-![Screenshot 2](Screenshot-preview.png)
+![Screenshot 2](screenshot-preview.png)
 
 ## Contributor Guide
 
