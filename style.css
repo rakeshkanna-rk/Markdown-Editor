@@ -6,6 +6,7 @@
   --font: "Roboto Serif", serif;
   --bg-color: #2c2c2c;
   --text-color: #fff;
+  --hover-bg: #555;
   --H1: 22px;
   --H2: 18px;
   --H3: 14px;
@@ -31,7 +32,7 @@ body {
   flex-wrap: wrap-reverse;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: 0px 10px;
   gap: 10px;
   align-self: stretch;
   position: relative;
@@ -103,7 +104,35 @@ body {
   cursor: pointer;
 }
 
-.circles {
+.downloadmd button:last-child {
+  color: var(--bg-color);
+  background: var(--text-color);
+}
+
+/* Toolbar */
+.toolbar {
+  padding: 10px;
+  text-align: start;
+}
+
+.toolbar-btn {
+  font-family: var(--font);
+  font-size: var(--H3);
+  color: var(--text-color);
+  padding: var(--padding-small) var(--padding-medium);
+  background: var(--bg-color);
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.toolbar-btn:hover {
+  background: #555;
+}
+
+
+.righter {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -111,25 +140,11 @@ body {
   gap: 7px;
 }
 
-.circle {
-  width: 12.5px;
-  height: 12.5px;
-  background-color: #888;
-  border-radius: 50%;
-}
-
-.circle:nth-child(3):hover {
-  background-color: #c20b0e;
-}
-.circle:nth-child(2):hover {
-  background-color: #47a700;
-}
-.circle:nth-child(1):hover {
-  background-color: #ffe500;
-}
-
 .editor {
+  position: absolute;
+  background-color: #151515;
   width: 100%;
+  height: 80vh;
   padding: var(--padding-small);
   font-family: var(--editor-font);
   font-size: var(--H2);
@@ -139,7 +154,14 @@ body {
   overflow-y: hidden; /* Hide vertical scrollbar */
 }
 
-.preview {
+.CodeMirror {
+  height: 100% !important;
+  min-height: 80vh;
+  font-size: var(--H2);
+  line-height: 1.6;
+}
+
+#preview {
   width: 100%;
   padding: var(--padding-medium);
   line-height: 1.5;
@@ -148,6 +170,10 @@ body {
   border: 1px solid #ccc;
   border-radius: 5px;
   margin-top: 20px;
+}
+
+#preview.active {
+  opacity: 1;
 }
 
 .credits {
@@ -168,30 +194,6 @@ body {
 
 .credits a:hover {
   opacity: 1;
-}
-
-.footer {
-  position: fixed;
-  bottom: 0px;
-  width: 100%;
-}
-
-footer img {
-  width: 25px;
-  height: 25px;
-}
-
-.foot-div {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  font-family: var(--editor-font);
-  font-size: 15px;
-  background-color: #1d1d1d;
-  color: #ababab;
-  padding: 10px;
 }
 
 body::-webkit-scrollbar {

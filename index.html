@@ -11,8 +11,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.26.0/theme/base16-dark.css"
     />
-
-    <!-- Import marked JavaScript -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.26.0/codemirror.css"
@@ -20,7 +18,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.26.0/codemirror.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.26.0/mode/markdown/markdown.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.min.js"></script>
-    <!-- Include CodeMirror autoCloseBrackets addon -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/addon/edit/closebrackets.min.js"></script>
   </head>
 
@@ -34,36 +31,37 @@
         <div class="downloadmd">
           <input type="text" id="downloadmd" placeholder="Enter file name" />
           <button onclick="downloadMarkdown()">Download</button>
+          <button onclick="togglePreview()">Compile</button>
         </div>
       </div>
-      <div class="circles">
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
+      <div class="righter">
+        <div class="credits">
+          <a href="https://github.com/rakeshkanna-rk/Markdown-Editor">
+            <img src="github.svg" alt="github" width="40px" />
+          </a>
+        </div>
       </div>
     </nav>
 
-    <!-- Editor -->
-    <div class="editor" id="editor"></div>
-
-    <!-- Preview -->
-    <div class="preview" id="preview"></div>
-
-    <!--Credits-->
-    <div class="credits">
-      <a href="https://github.com/rakeshkanna-rk/Markdown-Editor">
-        <img src="github.svg" alt="github" width="40px" />
-      </a>
+    <!-- Markdown Toolbar -->
+    <div class="toolbar">
+      <button onclick="insertMarkdown('# ')" class="toolbar-btn">H1</button>
+      <button onclick="insertMarkdown('## ')" class="toolbar-btn">H2</button>
+      <button onclick="insertMarkdown('### ')" class="toolbar-btn">H3</button>
+      <button onclick="insertMarkdown('**text-here**')" class="toolbar-btn">Bold</button>
+      <button onclick="insertMarkdown('*text-here*')" class="toolbar-btn">Italic</button>
+      <button onclick="insertMarkdown('[Link](https://)')" class="toolbar-btn">Link</button>
+      <button onclick="insertMarkdown('![alt-text](image-url)')" class="toolbar-btn">Image</button>
     </div>
 
-    <!--Footer-->
-    <footer class="footer">
-      <div class="foot-div">
-        <img src="favicon.svg" alt="logo" />
-        <span style="font-size: 27px">&copy;</span> 2024 Rakesh Kanna. All rights reserved.
-      </div>
-    </footer>
-
+    <div class="viewer">
+      <!-- Editor -->
+      <div class="editor" id="editor"></div>
+      <!-- Preview (Initially Hidden) -->
+      <div class="preview" id="preview"></div>
+    </div>
+    <br>
+    
     <script src="script.js"></script>
   </body>
 </html>
