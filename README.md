@@ -1,4 +1,4 @@
-![Thumbnail](Thumbnail.png)
+![Thumbnail](Thambnail.png)
   
 # Markdown Editor
 
